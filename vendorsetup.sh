@@ -40,7 +40,7 @@ export OF_USE_TWRP_SAR_DETECT=1
 export OF_MAINTAINER="Shekhawat2"
 
 # Quick Backup Defaults
-export OF_QUICK_BACKUP_LIST="/boot;/data;/system;/vendor;"
+export OF_QUICK_BACKUP_LIST="/boot;/data;/system;/system_root;/vendor;"
 
 # Update Magisk
 export FOX_USE_SPECIFIC_MAGISK_ZIP="device/xiaomi/whyred/prebuilt/Magisk-v24.3.zip"
