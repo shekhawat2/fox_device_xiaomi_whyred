@@ -20,14 +20,13 @@
 
 # OrangeFox
 export LC_ALL="C"
-export FOX_VERSION="4.4-R11.1_3"
+export DATE=$(sed "s/://g" <<< $(date +%y%m%d_%T))
+export FOX_VERSION="R11.1"
 export FOX_BUILD_TYPE="Unofficial"
-export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+export FOX_VARIANT="4.19-$DATE"
 export FOX_BUGGED_AOSP_ARB_WORKAROUND="1510672800" # Tue Nov 14 15:20:00 GMT 2017
-export FOX_REPLACE_BOOTIMAGE_DATE=1
 export OF_SKIP_DECRYPTED_ADOPTED_STORAGE=1
 export OF_SCREEN_H=2160
-export OF_USE_MAGISKBOOT=1
 export OF_USE_GREEN_LED=0
 export OF_ALLOW_DISABLE_NAVBAR=0
 export OF_STATUS_INDENT_LEFT=48
@@ -36,7 +35,8 @@ export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
 export OF_NO_MIUI_OTA_VENDOR_BACKUP=1
 export OF_NO_MIUI_PATCH_WARNING=1
 export OF_OTA_RES_DECRYPT=1
-export OF_USE_TWRP_SAR_DETECT=1
+export OF_NO_SAMSUNG_SPECIAL=1
+export FOX_ENABLE_APP_MANAGER=1
 export OF_MAINTAINER="Shekhawat2"
 export OF_MAINTAINER_AVATAR="device/xiaomi/whyred/shekhawat2.png"
 
@@ -54,6 +54,3 @@ export FOX_USE_TAR_BINARY=1
 export FOX_USE_XZ_UTILS=1
 export FOX_USE_GREP_BINARY=1
 export FOX_USE_UNZIP_BINARY=1
-
-# Add lunch target
-add_lunch_combo omni_whyred-eng
